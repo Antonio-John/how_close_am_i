@@ -8,6 +8,7 @@ import geopandas as gpd
 # modules
 import class_test
 
+
 # current working directory
 CWD = os.getcwd()
 CENTROID_YEAR = "2011"
@@ -19,6 +20,9 @@ oa_path = os.path.join(CWD,"data","pop_weighted_centroids",
 
 # output area dataframe
 oa_geo = gpd.read_file(oa_path)
+
+example = class_test.Population_Objects(oa_geo)
+example.unique_output_areas()
 
 # pop estimates for OA output path
 pop_path = os.path.join(CWD,"data","population_estimates",
