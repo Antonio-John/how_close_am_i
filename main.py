@@ -5,6 +5,9 @@ import os
 import pandas as pd
 import geopandas as gpd
 
+# modules
+import class_test
+
 # current working directory
 CWD = os.getcwd()
 CENTROID_YEAR = "2011"
@@ -31,9 +34,9 @@ oa_la_lookup_path = os.path.join("data", "oa_la_mapping", LA_YEAR,
 oa_la_lookup = pd.read_csv(oa_la_lookup_path)
 print(oa_la_lookup)
 
-# figure out how to store large data
-# https://git-lfs.github.com.
 # merge together
+oa_centroids_and_pop = oa_geo.merge(population,on="OA11CD")
+
 
 # read in potential data
 
